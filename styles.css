@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --blue-300: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --blue-100: hsl(224, 23%, 55%);
+  --blue-600: hsl(223, 47%, 23%);
+}
+
+body {
+  height: 100vh;
+  max-width: 1440px;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 33%;
+  background-color: white;
+  font-family: "Red Hat Display";
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.illustration-hero {
+  width: 100%;
+}
+
+h1 {
+  font-weight: 900;
+  margin: 1.5rem 0 1rem 0;
+}
+
+p {
+  color: var(--blue-100);
+  margin: 0 2rem;
+}
+
+.annual-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  padding: 0.65rem;
+  margin: 1rem 3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.change-link {
+  color: var(--blue-300);
+  margin-left: 3rem;
+}
+
+.payment-icon {
+  background-color: var(--blue-300);
+  border-radius: 15px;
+  padding: 0.65rem;
+  margin: 2rem 3rem;
+  box-shadow: 0 10px 15px var(--pale-blue);
+}
+
+.payment {
+  color: white;
+  text-decoration: none;
+}
+
+.cancel {
+  color: var(--blue-100);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.change-link:hover {
+  opacity: 60%;
+  text-decoration: none;
+}
+
+.payment-icon:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: var(--blue-600);
+}
+
+@media only screen and (max-width: 375px) {
+  section {
+    width: 90%;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+  }
+  .annual-plan {
+    margin: 1rem 1.5rem;
+  }
+  .change-link {
+    margin-left: 0.5rem;
+  }
+
+  .payment-icon {
+    margin: 2rem 1.5rem;
+  }
+}
