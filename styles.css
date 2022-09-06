@@ -1,123 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 
   --pale-blue: hsl(225, 100%, 94%);
-  --blue-300: hsl(245, 75%, 52%);
+  --bright-blue: hsl(245, 75%, 52%);
   --very-pale-blue: hsl(225, 100%, 98%);
-  --blue-100: hsl(224, 23%, 55%);
-  --blue-600: hsl(223, 47%, 23%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
 body {
-  height: 100vh;
-  max-width: 1440px;
-  background-image: url(images/pattern-background-desktop.svg);
-  background-color: var(--pale-blue);
-  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+
+  background-color: var(--pale-blue);
 }
 
 main {
-  width: 100%;
-}
+  width: 95%;
+  max-width: 330px;
+  max-height: 800px;
 
-section {
-  width: 33%;
   background-color: white;
-  font-family: "Red Hat Display";
-  font-size: 1.2rem;
-  text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  margin: 0 auto;
-  padding-bottom: 3rem;
 }
 
-.illustration-hero {
-  width: 100%;
+/* top of the card */
+
+.img-hero {
+  max-width: 100%;
+
+  object-fit: cover;
 }
+
+/* content of the card */
 
 h1 {
+  font-size: 1.35rem;
   font-weight: 900;
-  margin: 1.5rem 0 1rem 0;
+  margin: 1.2rem 0 1rem 0;
 }
 
-p {
-  color: var(--blue-100);
-  margin: 0 2rem;
+.content-regular {
+  color: var(--desaturated-blue);
+  width: 80%;
+  margin: 0 auto;
+
+  line-height: 1.5rem;
 }
 
-.annual-plan {
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  margin: 1.75rem auto;
   background-color: var(--very-pale-blue);
-  border-radius: 15px;
-  padding: 0.65rem;
-  margin: 1rem 3rem;
+  width: 90%;
+  border-radius: 10px;
+  padding: 1em;
+
+  font-size: 0.95rem;
 }
 
-h2 {
-  font-size: 1.2rem;
+.pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.change-link {
-  color: var(--blue-300);
-  margin-left: 3rem;
+.price {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
 }
 
-.payment-icon {
-  background-color: var(--blue-300);
-  border-radius: 15px;
-  padding: 0.65rem;
-  margin: 2rem 3rem;
-  box-shadow: 0 10px 15px var(--pale-blue);
+.title-annual-plan {
+  font-weight: 700;
+  text-align: center;
 }
 
-.payment {
+.subscription-price {
+  font-size: 0.9rem;
+  color: var(--desaturated-blue);
+}
+
+.btn-change {
+  display: inline-block;
+  color: var(--bright-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.btn-change:hover,
+.btn-change-focus {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+/* bottom of the card */
+
+.btn-payment {
+  display: inline-block;
+  width: 90%;
+
+  background-color: var(--bright-blue);
+  padding: 0.85rem;
+  border-radius: 10px;
+
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 
-.cancel {
-  color: var(--blue-100);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.change-link:hover {
-  opacity: 60%;
-  text-decoration: none;
-}
-
-.payment-icon:hover {
-  opacity: 60%;
+.btn-payment:hover,
+.btn-payment:focus {
   cursor: pointer;
+  opacity: 70%;
 }
 
-.cancel:hover {
-  color: var(--blue-600);
+.btn-cancel {
+  display: inline-block;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.5em;
 }
 
-@media only screen and (max-width: 375px) {
-  section {
-    width: 90%;
-    padding-bottom: 2rem;
-    font-size: 1rem;
-  }
-  .annual-plan {
-    margin: 1rem 1.5rem;
-  }
-  .change-link {
-    margin-left: 0.5rem;
-  }
-
-  .payment-icon {
-    margin: 2rem 1.5rem;
-  }
+.btn-cancel:hover,
+.btn-cancel:focus {
+  color: black;
 }

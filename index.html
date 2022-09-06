@@ -4,54 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Red+Hat+Display:ital,wght@0,500;0,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="images/favicon-32x32.png" />
+
     <link rel="stylesheet" href="styles.css" />
-    <title>Order summary card solution</title>
+    <link rel="icon" href="images/favicon-32x32.png" />
+
+    <title>Order summary</title>
   </head>
   <body>
     <main>
-      <section>
-        <img
-          class="illustration-hero"
-          src="images/illustration-hero.svg"
-          tag="illustration of a person dancing"
-        />
-        <h1>Order Summary</h1>
-        <p>
-          You can now listen to millions of songs, audiobooks, and podcasts on
-          any device anywhere you like!
-        </p>
-        <div class="annual-plan">
-          <img src="/images/icon-music.svg" tag="icon of a note" />
-          <div>
-            <h2>Annual Plan</h2>
-            <p>$55.99/year</p>
+      <img
+        class="img-hero"
+        src="images/illustration-hero.svg"
+        alt="person dancing to music cartoon"
+      />
+
+      <h1>Order Summary</h1>
+      <p class="content-regular">
+        You can now listen to millions of songs, audiobooks and podcasts on any
+        device anywhere you like!
+      </p>
+
+      <div class="container">
+        <div class="pricing">
+          <img
+            src="images/icon-music.svg"
+            alt="music icon"
+            class="icon-music"
+          />
+          <div class="price">
+            <p class="title-annual-plan">Annual plan</p>
+            <p class="subscription-price">$59.99/year</p>
           </div>
-          <a class="change-link" href="">Change</a>
         </div>
-        <div class="payment-icon">
-          <a class="payment" href="">Proceed to payment</a>
-        </div>
-        <a class="cancel" href="">Cancel Order</a>
-      </section>
-    </main>
-    <!-- <footer>
-      <div class="attribution">
-        Challenge by
-        <a
-          class="footer-link"
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a class="footer-link" href="https://github.com/kprosek">kprosek</a>.
+        <a href="#" class="btn-change">Change</a>
       </div>
-    </footer> -->
+
+      <a href="#" class="btn-payment">Proceed to Payment</a>
+      <a href="#" class="btn-cancel">Cancel Order</a>
+    </main>
   </body>
 </html>
