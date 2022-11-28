@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-
+:root {
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
   --very-pale-blue: hsl(225, 100%, 98%);
@@ -11,13 +8,20 @@
   --dark-blue: hsl(223, 47%, 23%);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 
   height: 100vh;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-size: 1rem;
   text-align: center;
 
@@ -41,7 +45,7 @@ main {
   }
 
   body {
-    background-image: url("images/pattern-background-desktop.svg");
+    background-image: url('images/pattern-background-desktop.svg');
     background-repeat: repeat-x;
   }
 }
@@ -86,7 +90,6 @@ h1 {
 
 .pricing {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -107,7 +110,6 @@ h1 {
 }
 
 .btn-change {
-  display: inline-block;
   color: var(--bright-blue);
   font-size: 0.8rem;
   font-weight: 700;
@@ -124,6 +126,7 @@ h1 {
     font-size: 1.75rem;
     margin: 2.5rem 0 1.25rem 0;
   }
+
   .container {
     width: 80%;
     padding: 1.7em;
